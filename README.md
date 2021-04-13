@@ -12,3 +12,11 @@
 ```
 
 ![image](https://user-images.githubusercontent.com/65394762/114137365-a9c1bb00-993e-11eb-90e6-f601f58efbb9.png)
+
+# SQL语句中的关键语句
+## row_number()
+```ROW_NUMBER() OVER (<partition_definition> <order_definition>)```
+
+
+
+

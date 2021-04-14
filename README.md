@@ -10,8 +10,13 @@
 7、select 的字段；
 8、使用order by对结果集进行排序。
 ```
-
+- 示例一：
 ![image](https://user-images.githubusercontent.com/65394762/114137365-a9c1bb00-993e-11eb-90e6-f601f58efbb9.png)
+
+- 示例二： 
+![image](https://user-images.githubusercontent.com/65394762/114671692-f2aab280-9d36-11eb-819e-1f40af915410.png)
+
+
 
 # SQL语句中的关键语句
 ## row_number()，窗口函数

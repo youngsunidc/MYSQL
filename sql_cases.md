@@ -13,6 +13,7 @@ select pageurl,title,is_jd,model_name_ferda,Q1_sales
 from jd_guidance_2003nb
 where model_name_ferda is not null and Q1_sales> 1000
 order by convert(Q1_sales,signed) desc
+df = pd.read_sql(sql,engine)
 '''
 
 
@@ -20,7 +21,6 @@ order by convert(Q1_sales,signed) desc
 
 - 数据录入
 ``` python
-df = pd.read_sql(sql,engine)
 
 """
 name:需要操作的表的名称
@@ -32,5 +32,7 @@ index_label:索引列的列标签,默认为None
 chunksize:每次插入多少行数据,默认为None,一次性批量写入所有数据
 dtype :字典格式,key是字段名称,value是字段对应的数据格式.可以在插入数据时指定每个字段的数据格式.默认为None
 """
+
+engine = sqlalchemy.create_engine('mysql+pymysql://root:root@127.0.0.1:3306/jd_guidance') 
 df.to_sql("sqlpy_test",con=engine)
 ```

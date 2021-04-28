@@ -64,13 +64,14 @@ from 班级;
 ## cross join方法
 表示表1中每一行对表2中每一行进行交叉式的组合
 
-- 表一
+- **表一**
 ![image](https://user-images.githubusercontent.com/65394762/116359576-8a2cfc80-a831-11eb-9903-5aae0b66289a.png)
 
-- 表二
+
+- **表二**
 ![image](https://user-images.githubusercontent.com/65394762/116359702-ae88d900-a831-11eb-8195-1e6d54ab9269.png)
 
-- cross后的交叉表
+- **cross后的交叉表**
 ![image](https://user-images.githubusercontent.com/65394762/116359835-daa45a00-a831-11eb-9ef8-835a38739f9c.png)
 
 

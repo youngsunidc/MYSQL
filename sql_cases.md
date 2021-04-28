@@ -13,9 +13,8 @@ select pageurl,title,is_jd,model_name_ferda,Q1_sales
 from jd_guidance_2003nb
 where model_name_ferda is not null and Q1_sales> 1000
 order by convert(Q1_sales,signed) desc
-df = pd.read_sql(sql,engine)
 '''
-
+df = pd.read_sql(sql,engine)
 
 ```
 

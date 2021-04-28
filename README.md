@@ -69,6 +69,7 @@ from 班级;
 
 
 - **表二**
+
 ![image](https://user-images.githubusercontent.com/65394762/116359702-ae88d900-a831-11eb-8195-1e6d54ab9269.png)
 
 - **cross后的交叉表**

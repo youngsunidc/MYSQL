@@ -61,9 +61,21 @@ from 班级;
 
 
 
-## if()
+## if()和sum()函数的结合（条件占比）； 
 
+- 可以算出满足条件的占比情况，即 sum(if(<条件>,1,0))。满足条件的为1，不满足条件的则为0； 
+
+- *条件占比* 
+``` python
+select  brand_ferda, sum(if(is_jd ="自营",1,0) ) / count(*)as "京东自营比例"
+from jd_guidance_2005nb
+group by brand_ferda ;
 ```
+![image](https://user-images.githubusercontent.com/65394762/117126991-1c06ad80-adce-11eb-891e-de819fa8b467.png)
+
+
+
+``` python
 select * ,price_group/total as "ratio" from
 (select brand_ferda, unit_price ,
 sum(if(unit_price >5000,1,0))as "price_group",count(*) as"total"
@@ -71,6 +83,7 @@ from jd_guidance_2004nb
 group by brand_ferda) as table_b
 order by ratio desc;
 ```
+
 ![image](https://user-images.githubusercontent.com/65394762/117125331-fc6e8580-adcb-11eb-828a-23ab8128e252.png)
 
 

@@ -18,8 +18,8 @@
 
 
 
-# SQL语句中的关键语句
-## row_number()，窗口函数
+# SQL语句中的应用场景
+## row_number()，窗口函数  （ Pivot子项排名)
 ```ROW_NUMBER() OVER (<partition_definition> <order_definition>)```
   - partition_definition: partition by是将子句分配成更加小的集合。可以以逗号分隔成多个表达式，这样可以进行一步的进行细分。  
   - Order by: 子句的目的是设置行的顺序， 此Order_by独立于"查询"需要的order by语句。 
@@ -58,6 +58,22 @@ select *,
 from 班级;
 ```
 ![image](https://user-images.githubusercontent.com/65394762/114491975-3247a080-9c4a-11eb-80c8-f580c16b0378.png)
+
+
+
+## if()
+
+```
+select * ,price_group/total as "ratio" from
+(select brand_ferda, unit_price ,
+sum(if(unit_price >5000,1,0))as "price_group",count(*) as"total"
+from jd_guidance_2004nb
+group by brand_ferda) as table_b
+order by ratio desc;
+```
+![image](https://user-images.githubusercontent.com/65394762/117125331-fc6e8580-adcb-11eb-828a-23ab8128e252.png)
+
+
 
 
 

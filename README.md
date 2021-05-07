@@ -87,7 +87,12 @@ order by ratio desc;
 ![image](https://user-images.githubusercontent.com/65394762/117125331-fc6e8580-adcb-11eb-828a-23ab8128e252.png)
 
 
+## sum() over (order by) 累积求和
 
+
+
+### 通过Groupby累计求和
+![image](https://user-images.githubusercontent.com/65394762/117282230-145f0b80-ae97-11eb-836a-cca23554fb68.png)
 
 
 ## cross join方法

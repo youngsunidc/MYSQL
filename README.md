@@ -132,9 +132,10 @@ limit 10
 
 ## count()方法
 **count(*): ** 总行数，包括空行。
-**count(xx): ** 某列总行数，不包括空行。 
-**count(distinct xx)：某列的去重数值  **
 
+**count(xx): ** 某列总行数，不包括空行。 
+
+**count(distinct xx)：某列的去重数值  **
 
 ```
 select  
@@ -146,5 +147,9 @@ count(distinct is_jd ) as '统计'
 from test1;
 ```
 ![image](https://user-images.githubusercontent.com/65394762/148180372-713d05e9-594f-405a-b768-9b29237c48f8.png)
+
+## case when 方法
+
+
 
 

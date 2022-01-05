@@ -167,7 +167,7 @@ from sqlpy_test;
 
 
 
-
+*分层汇总统计*
 ```
 select 
 (case 
@@ -192,6 +192,8 @@ when unit_price_2104 is null then 'null'
 end );
 
 ```
+![image](https://user-images.githubusercontent.com/65394762/148188814-7271ad4a-262b-4a13-adb4-07d917f8d9cd.png)
+
 
 
 

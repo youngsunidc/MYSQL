@@ -131,11 +131,11 @@ limit 10
 
 
 ## count()方法
-**count(*): ** 总行数，包括空行。
+**count(*):** 总行数，包括空行。
 
-**count(xx): ** 某列总行数，不包括空行。 
+**count(xx):** 某列总行数，不包括空行。 
 
-**count(distinct xx)：某列的去重数值  **
+**count(distinct xx)：** 某列的去重数值  
 
 ```
 select  

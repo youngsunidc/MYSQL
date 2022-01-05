@@ -163,6 +163,36 @@ when unit_price_2104 is null then 'null'
 end ) as price_group
 from sqlpy_test;
 ```
+![image](https://user-images.githubusercontent.com/65394762/148186790-591a2a01-5645-4031-b5f2-180690075c4c.png)
+
+
+
+
+```
+select 
+(case 
+when unit_price_2104 < 5000 then '0K-5K'
+when unit_price_2104 between 5000 and 6000 then '5k-6k' 
+when unit_price_2104 between 6000 and 7000 then '6k-7k'  
+when unit_price_2104 between 7000 and 8000 then '7k-8k'
+when unit_price_2104 between 8000 and 10000 then '8k-1w'
+when unit_price_2104 >10000  then "1W+"
+when unit_price_2104 is null then 'null'
+end ) as price_group, count(*)
+from sqlpy_test  
+group by 
+(case 
+when unit_price_2104 < 5000 then '0K-5K'
+when unit_price_2104 between 5000 and 6000 then '5k-6k' 
+when unit_price_2104 between 6000 and 7000 then '6k-7k'  
+when unit_price_2104 between 7000 and 8000 then '7k-8k'
+when unit_price_2104 between 8000 and 10000 then '8k-1w'
+when unit_price_2104 >10000  then "1W+"
+when unit_price_2104 is null then 'null'
+end );
+
+```
+
 
 
 *逻辑判断*
@@ -173,6 +203,7 @@ select  unit_price_2103,unit_price_2104,
 from test1 ;
 
 ```
+![image](https://user-images.githubusercontent.com/65394762/148186842-6dd1ceaf-0c25-4746-bd2e-0fcdc0f0ee39.png)
 
 
 

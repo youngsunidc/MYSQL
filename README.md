@@ -130,6 +130,21 @@ limit 10
 ![image](https://user-images.githubusercontent.com/65394762/116359084-f3604000-a830-11eb-8de4-794e8c31a5ee.png)
 
 
+## count()方法
+**count(*): ** 总行数，包括空行。
+**count(xx): ** 某列总行数，不包括空行。 
+**count(distinct xx)：某列的去重数值  **
 
+
+```
+select  
+sum( case when is_jd is null then 0 else 1 end    ) as '非空',
+sum( case when is_jd is null then 1 else 0 end    ) as '空',
+count(*) as '全部数量统计',
+count( is_Jd) as '非空统计',
+count(distinct is_jd ) as '统计'
+from test1;
+```
+![image](https://user-images.githubusercontent.com/65394762/148180372-713d05e9-594f-405a-b768-9b29237c48f8.png)
 
 
